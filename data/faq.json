@@ -1,0 +1,135 @@
+[
+  {
+    "id": "card_delivery",
+    "intents": ["card_arrival", "card_delivery_estimate"],
+    "risk": "low",
+    "question": "How long does it take for my card to arrive?",
+    "answer": "Cards are posted within 2 working days of ordering. In the UK they usually arrive within 5-7 working days, and within 14 working days elsewhere. You can track delivery in the NovaBank app under Card > Delivery status. If your card has not arrived after 14 working days, freeze it in the app and order a free replacement."
+  },
+  {
+    "id": "activate_card",
+    "intents": ["activate_my_card"],
+    "risk": "low",
+    "question": "How do I activate my card?",
+    "answer": "Open the NovaBank app, go to Card and tap Activate, then enter the 6-digit code printed on the letter that came with your card. Your card works for online and contactless payments straight away; make one chip-and-PIN payment or ATM withdrawal to enable contactless above £100."
+  },
+  {
+    "id": "exchange_rates",
+    "intents": ["exchange_rate"],
+    "risk": "low",
+    "question": "What exchange rate do you use?",
+    "answer": "NovaBank uses the Visa wholesale exchange rate with no markup on weekdays. On weekends, when currency markets are closed, we add a 1% markup to protect against rate changes. You can see the current rate in the app under Accounts > Exchange."
+  },
+  {
+    "id": "top_up_limits",
+    "intents": ["top_up_limits"],
+    "risk": "low",
+    "question": "How much can I top up?",
+    "answer": "The minimum top-up is £5 and the maximum single top-up is £5,000. You can top up up to £20,000 in total per rolling 30 days. Verified business accounts can request higher limits from Support."
+  },
+  {
+    "id": "change_pin",
+    "intents": ["change_pin"],
+    "risk": "low",
+    "question": "How do I change my PIN?",
+    "answer": "You can view your PIN in the app under Card > Show PIN. To change it, insert your card at any UK ATM, choose PIN services and follow the steps. Your new PIN works straight away."
+  },
+  {
+    "id": "mobile_wallets",
+    "intents": ["apple_pay_or_google_pay"],
+    "risk": "low",
+    "question": "Can I use Apple Pay or Google Pay?",
+    "answer": "Yes, NovaBank cards work with Apple Pay and Google Pay. Add your card from the app under Card > Add to wallet. Samsung Pay and other wallets are not supported yet. To remove a card from a wallet, delete it in the wallet app on your phone."
+  },
+  {
+    "id": "supported_countries",
+    "intents": ["country_support"],
+    "risk": "low",
+    "question": "Which countries is NovaBank available in?",
+    "answer": "You can open a NovaBank account if you live in the UK or a country in the European Economic Area (EEA). Your card works for payments and cash withdrawals worldwide wherever Visa is accepted, but residents outside the UK and EEA, for example in the US or Brazil, cannot open an account."
+  },
+  {
+    "id": "age_requirement",
+    "intents": ["age_limit"],
+    "risk": "low",
+    "question": "How old do I need to be to open an account?",
+    "answer": "You must be 18 or older to open a NovaBank account. There is no upper age limit. Customers aged 13-17 can get a NovaBank Junior card linked to a parent's account."
+  },
+  {
+    "id": "atm_use",
+    "intents": ["atm_support"],
+    "risk": "low",
+    "question": "Can I use my card at ATMs?",
+    "answer": "You can withdraw cash at any ATM that accepts Visa, worldwide. Withdrawals are free up to £200 per calendar month; after that we charge 2% of the amount withdrawn. Some ATM operators add their own fee, which the ATM screen will show before you confirm."
+  },
+  {
+    "id": "lost_stolen_card",
+    "intents": ["lost_or_stolen_card"],
+    "risk": "high",
+    "question": "My card is lost or stolen, what should I do?",
+    "answer": "Freeze your card immediately in the app under Card > Freeze; this blocks all payments. If you find it again, you can unfreeze it in the same place. If it is gone for good, tap Report lost or stolen to cancel it permanently and order a replacement. Check your recent transactions and report any you do not recognise."
+  },
+  {
+    "id": "compromised_card",
+    "intents": ["compromised_card"],
+    "risk": "high",
+    "question": "I think my card details have been compromised",
+    "answer": "Freeze your card in the app straight away, then tap Report compromised card. This cancels the card and sends you a new one with a new number. Any payments you did not make should be reported in the app so we can investigate and refund them."
+  },
+  {
+    "id": "cancel_transfer",
+    "intents": ["cancel_transfer"],
+    "risk": "high",
+    "question": "How do I cancel a transfer?",
+    "answer": "You can cancel a transfer only while it shows as Pending. Open it in the app under Payments and tap Cancel transfer. Once a transfer shows as Completed it cannot be cancelled; contact the recipient to ask for the money back, or contact Support if you think it was sent by mistake or as part of a scam."
+  },
+  {
+    "id": "transfer_timing",
+    "intents": ["transfer_timing"],
+    "risk": "medium",
+    "question": "How long do transfers take?",
+    "answer": "Transfers to UK bank accounts usually arrive within minutes and always within 2 hours. Transfers within the EEA in euros take up to 1 working day. International transfers in other currencies take 1-5 working days depending on the destination."
+  },
+  {
+    "id": "refunds",
+    "intents": ["request_refund"],
+    "risk": "high",
+    "question": "How do I get a refund?",
+    "answer": "Refunds for purchases are issued by the merchant, so first ask the seller to refund you. Once they do, it can take up to 5 working days to appear. If the merchant refuses or does not reply within 14 days, open the payment in the app and tap Dispute so we can raise a chargeback."
+  },
+  {
+    "id": "unrecognised_payment",
+    "intents": ["card_payment_not_recognised"],
+    "risk": "high",
+    "question": "There is a card payment I don't recognise",
+    "answer": "Check the merchant name and date in the app, as some businesses use a different name on statements. If you still do not recognise it, freeze your card and open the payment, then tap Report payment. We will investigate and, if it was fraud, refund you and send a new card."
+  },
+  {
+    "id": "duplicate_charge",
+    "intents": ["transaction_charged_twice"],
+    "risk": "high",
+    "question": "Why was I charged twice?",
+    "answer": "A payment can briefly appear twice when a merchant takes a pre-authorisation and then the final charge; the extra one usually disappears within 7 days. If both payments show as Completed after 7 days, open one of them in the app and tap Report duplicate charge."
+  },
+  {
+    "id": "forgotten_passcode",
+    "intents": ["passcode_forgotten"],
+    "risk": "high",
+    "question": "I forgot my app passcode",
+    "answer": "On the app's login screen tap Forgot passcode. We will send a code to your registered phone number and ask you to take a selfie to confirm your identity, then you can set a new passcode. NovaBank staff will never ask you for your passcode."
+  },
+  {
+    "id": "close_account",
+    "intents": ["terminate_account"],
+    "risk": "high",
+    "question": "How do I close my account?",
+    "answer": "Move any remaining money out of your account first, then go to Profile > Account > Close account in the app. Closing is permanent and cancels all your cards. We keep your records for 5 years as required by law."
+  },
+  {
+    "id": "declined_payment",
+    "intents": ["declined_card_payment"],
+    "risk": "medium",
+    "question": "Why was my card payment declined?",
+    "answer": "Common reasons are not enough money in your account, a frozen card, a wrong PIN, or a merchant type you have blocked in Card > Security settings. The app shows the reason for each declined payment under Payments. If none of these apply, contact Support from the app."
+  }
+]

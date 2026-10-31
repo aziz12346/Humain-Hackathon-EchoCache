@@ -1,0 +1,60 @@
+{
+  "_about": "Pairs that test the reuse decision. The seed is asked first so its answer gets stored. Then the probe is asked. should_reuse says whether giving the seed's stored answer to the probe is correct. probe_faq is the FAQ entry that should answer the probe ('none' = not covered by the FAQ, so the bot should say it cannot help and offer Support).",
+  "rewording": [
+    {"seed": "How do I change my PIN?", "probe": "What's the way to set a new PIN for my card?", "should_reuse": true, "probe_faq": "change_pin"},
+    {"seed": "How long does it take for my card to arrive?", "probe": "When will my new card be delivered?", "should_reuse": true, "probe_faq": "card_delivery"},
+    {"seed": "How do I activate my card?", "probe": "My card just came, how do I turn it on?", "should_reuse": true, "probe_faq": "activate_card"},
+    {"seed": "Can I use Apple Pay with NovaBank?", "probe": "Does NovaBank work with Apple Pay?", "should_reuse": true, "probe_faq": "mobile_wallets"},
+    {"seed": "What is the minimum age to open an account?", "probe": "How old do I need to be to sign up?", "should_reuse": true, "probe_faq": "age_requirement"},
+    {"seed": "My card was stolen, what should I do?", "probe": "Someone stole my card, help", "should_reuse": true, "probe_faq": "lost_stolen_card"},
+    {"seed": "How do I close my account?", "probe": "I want to delete my NovaBank account", "should_reuse": true, "probe_faq": "close_account"},
+    {"seed": "I forgot my passcode", "probe": "I can't remember my app passcode, how do I reset it?", "should_reuse": true, "probe_faq": "forgotten_passcode"},
+    {"seed": "Why was I charged twice for the same payment?", "probe": "A purchase shows up two times on my account", "should_reuse": true, "probe_faq": "duplicate_charge"},
+    {"seed": "How long do bank transfers take?", "probe": "How many days until a transfer reaches the other account?", "should_reuse": true, "probe_faq": "transfer_timing"},
+    {"seed": "What are your exchange rates?", "probe": "Which exchange rate do you use when I pay abroad?", "should_reuse": true, "probe_faq": "exchange_rates"},
+    {"seed": "How do I get a refund for something I bought?", "probe": "I want my money back for an item I returned, how?", "should_reuse": true, "probe_faq": "refunds"},
+    {"seed": "Can I take cash out at any ATM?", "probe": "Which cash machines can I use my card at?", "should_reuse": true, "probe_faq": "atm_use"},
+    {"seed": "What's the maximum amount I can top up?", "probe": "Is there a limit on how much I can add to my account?", "should_reuse": true, "probe_faq": "top_up_limits"},
+    {"seed": "Why was my card declined?", "probe": "My card payment got rejected at a shop, why?", "should_reuse": true, "probe_faq": "declined_payment"}
+  ],
+  "negation": [
+    {"seed": "How do I cancel a transfer?", "probe": "I don't want my transfer to be cancelled, how do I make sure it goes through?", "should_reuse": false, "probe_faq": "transfer_timing"},
+    {"seed": "How do I close my account?", "probe": "How do I stop my account from being closed?", "should_reuse": false, "probe_faq": "none"},
+    {"seed": "I lost my card, how do I block it?", "probe": "I found my card again, how do I unblock it?", "should_reuse": false, "probe_faq": "lost_stolen_card"},
+    {"seed": "How do I turn on Apple Pay?", "probe": "How do I turn off Apple Pay?", "should_reuse": false, "probe_faq": "mobile_wallets"},
+    {"seed": "How do I request a refund?", "probe": "How do I cancel a refund request I made by mistake?", "should_reuse": false, "probe_faq": "none"},
+    {"seed": "My card arrived, how do I start using it?", "probe": "My card never arrived, what should I do?", "should_reuse": false, "probe_faq": "card_delivery"},
+    {"seed": "Why was I charged twice?", "probe": "Why was I only charged once when I bought two items?", "should_reuse": false, "probe_faq": "none"},
+    {"seed": "How do I cancel a transfer?", "probe": "I cancelled a transfer by mistake, can I undo the cancellation?", "should_reuse": false, "probe_faq": "none"},
+    {"seed": "Why was my card payment declined?", "probe": "Why was my card payment approved even though my card is frozen?", "should_reuse": false, "probe_faq": "compromised_card"},
+    {"seed": "How do I freeze my card?", "probe": "How do I unfreeze my card?", "should_reuse": false, "probe_faq": "lost_stolen_card"}
+  ],
+  "swap": [
+    {"seed": "Can I open a NovaBank account if I live in Spain?", "probe": "Can I open a NovaBank account if I live in Brazil?", "should_reuse": false, "probe_faq": "supported_countries"},
+    {"seed": "Is there a fee to withdraw £100 from an ATM?", "probe": "Is there a fee to withdraw £500 from an ATM?", "should_reuse": false, "probe_faq": "atm_use"},
+    {"seed": "My card hasn't arrived after 3 days", "probe": "My card hasn't arrived after 20 days", "should_reuse": false, "probe_faq": "card_delivery"},
+    {"seed": "Can I top up £1,000 in one go?", "probe": "Can I top up £10,000 in one go?", "should_reuse": false, "probe_faq": "top_up_limits"},
+    {"seed": "I'm 16, can I open an account?", "probe": "I'm 19, can I open an account?", "should_reuse": false, "probe_faq": "age_requirement"},
+    {"seed": "Does NovaBank support Apple Pay?", "probe": "Does NovaBank support Samsung Pay?", "should_reuse": false, "probe_faq": "mobile_wallets"},
+    {"seed": "How long does a transfer to a UK bank account take?", "probe": "How long does a transfer to a US bank account take?", "should_reuse": false, "probe_faq": "transfer_timing"},
+    {"seed": "What exchange rate do you use on weekdays?", "probe": "What exchange rate do you use on weekends?", "should_reuse": false, "probe_faq": "exchange_rates"}
+  ],
+  "personal": [
+    {"seed": "What's my balance?", "probe": "what is my balance", "should_reuse": false, "probe_faq": "none"},
+    {"seed": "Has my card ending 4421 been shipped?", "probe": "Has my card ending 7790 been shipped?", "should_reuse": false, "probe_faq": "none"},
+    {"seed": "Why did my transfer of £250 to John fail yesterday?", "probe": "Why did my transfer of £250 to John fail?", "should_reuse": false, "probe_faq": "none"},
+    {"seed": "What's my account number?", "probe": "Tell me my account number", "should_reuse": false, "probe_faq": "none"},
+    {"seed": "Show me my last 5 transactions", "probe": "What were my last five payments?", "should_reuse": false, "probe_faq": "none"},
+    {"seed": "When does my card expire?", "probe": "What's the expiry date on my card?", "should_reuse": false, "probe_faq": "none"},
+    {"seed": "How much did I spend last month?", "probe": "What did I spend in total last month?", "should_reuse": false, "probe_faq": "none"},
+    {"seed": "Is my refund for order 88213 processed?", "probe": "Has my refund for order 88213 gone through?", "should_reuse": false, "probe_faq": "none"}
+  ],
+  "creative": [
+    {"seed": "How do I change my PIN?", "probe": "Explain how to change my PIN as a short poem", "should_reuse": false, "probe_faq": "change_pin"},
+    {"seed": "How do I activate my card?", "probe": "Explain how to activate my card like I'm 5", "should_reuse": false, "probe_faq": "activate_card"},
+    {"seed": "How long do transfers take?", "probe": "Give me a different explanation of how long transfers take", "should_reuse": false, "probe_faq": "transfer_timing"},
+    {"seed": "What are your exchange rates?", "probe": "Summarise your exchange rate policy in one sentence", "should_reuse": false, "probe_faq": "exchange_rates"},
+    {"seed": "How do I close my account?", "probe": "Write a polite email I can send to close my account", "should_reuse": false, "probe_faq": "close_account"},
+    {"seed": "Can I use Apple Pay?", "probe": "Answer in Spanish: can I use Apple Pay?", "should_reuse": false, "probe_faq": "mobile_wallets"}
+  ]
+}
